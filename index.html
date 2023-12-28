@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightingale Travel</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&family=Kanit:wght@600&display=swap" rel="stylesheet">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navfst ">
+        <div class="container-fluid">
+            <span class="navbar-brand navigation" href="javascript:void(0)"><span class="capt">Nightingale </span>Travel</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section1">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdown1">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Packages
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu1" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#selection1">United States</a></li>
+                                <li><a class="dropdown-item" href="#selection2">India</a></li>
+                                <li><a class="dropdown-item" href="#selection3"> France</a></li>
+                                <li><a class="dropdown-item" href="#section2">Germany</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section4">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section5">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button" style="margin-right: 10px;">Search</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right ">
+                    <li><a href="#registerModal" class="navbg" data-bs-toggle="modal">Register</a></li>
+                    <li><a href="#loginModal" data-bs-toggle="modal" class="navbg">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">Login</div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            Email Id <input type="email" class="form-control" placeholder="Enter Your Email Id" id="email1" required>
+                            <p id="emailtext1"></p>
+                        </div>
+                        <div class="mb-3">
+                            Password <input type="password" class="form-control" placeholder="Enter Your Password" id="password1" required>
+                            <p id="pwdtext1"></p>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" value="login" class="btn btn-success">Login</button>
+                        </div>
+                    </form>
+                    <p>Don't have an Account? <a href="#registerModal" data-bs-toggle="modal"> Sign up</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of login modal-->
+
+    <!--Registration Modal -->
+    <div class="modal fade" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">Register</div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            Full Name <input type="text" class="form-control" placeholder="Enter Your Full Name" required id="fullname">
+                            <p id="fullnme"></p>
+                        </div>
+                        <div class="mb-3">
+                            Contact <input type="number" class="form-control" placeholder="Enter Your Contact Number" required id="contact">
+                            <p id="contacttext"></p>
+                        </div>
+                        <div class="mb-3">
+                            Date of Birth <input type="date" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            Gender <select name="gender" class="form-control" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            Email Id <input type="email" class="form-control" placeholder="Enter Your Email Id" id="email2" required>
+                            <p id="emailtext2"></p>
+                        </div>
+                        <div class="mb-3">
+                            Password <input type="password" class="form-control" placeholder="Enter a Password" id="password2" required>
+                            <p id="pwdtext2"></p>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" value="register" class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+                    <p>Already Have an Account? <a href="#loginModal" data-bs-toggle="modal"> Sign In</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of registration modal -->
+
+    <div class="img-abs">
+        <img src="./images/travel1.jpg" alt="front image" class="backimg">
+        <div class="container1">
+            <div class="box1">
+                <h2 style="font-size: 40px; font-weight: bolder; color: white">Welcome to Nightingale Travel</h2>
+            </div>
+            <div class="box2">
+                <h1 class="text" style="font-size: 85px;">Visit <span class="placename"> </span> </h1>
+            </div>
+            <div class="box3">
+                <input type="button" value="Book Place" class="btn btn-light ">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid bg-light">
+        <h1 class="text-center" id="section1" style="font-weight: 700;"><span class="heading" style="color: purple;">B</span>ook</h1>
+        <div class="row bg-light holder">
+
+            <section class="col-md-6 d-flex align-items-center justify-content-center bg-white first">
+                <img src="./images/logo.png" alt="Company Logo" id="logo">
+            </section>
+            <section class="col-md-6 second">
+                <div class="form-group textField">
+                    <div class="dropdown">
+                        <input placeholder="Where To" type="text" class="dropdown-toggle form-control" data-bs-toggle="dropdown" aria-expanded="false">
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li class="dropdown-item">India</li>
+                            <li class="dropdown-item">USA</li>
+                            <li class="dropdown-item">France</li>
+                            <li class="dropdown-item">Germany</li>
+                            <li class="dropdown-item">Paris</li>
+                            <li class="dropdown-item">London</li>
+                            <li class="dropdown-item">Singapore</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="How Many">
+                    <input type="date" class="form-control">
+                    <input type="date" class="form-control">
+                    <textarea class="form-control" rows="7" minlength="50" maxlength="500" placeholder="Enter Your Name & Details"></textarea>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h1 class="text-center" id="section2" style="font-weight: 700;"><span class="heading" style="color: purple;">P</span>ackages</h1>
+        <br>
+        <div class="row cards">
+            <div class="col-md-4 car">
+                <img src="./images/India.jpg" alt="India" id="selection2">
+                <div class="desc shadow">
+                    <h4>India</h4>
+                    <p><b>India is known for its rich cultural diversity, with several different religions, languages, and traditions.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$600</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/England.webp" alt="England">
+                <div class="desc shadow">
+                    <h4>England</h4>
+                    <p><b>England is famous for many things like David Beckham, Fish and Chips, Big Ben, Red Buses, black cabs, Oasis, the Beatles.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$500</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/France.jpg" alt="France" id="selection3">
+                <div class="desc shadow">
+                    <h4>France</h4>
+                    <p><b>France boasts an impressive array of historic landmarks, such as the iconic Eiffel Tower, Notre Dame Cathedral.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$550</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cards">
+            <div class="col-md-4 car">
+                <img src="./images/Dubai.jpg" alt="Dubai">
+                <div class="desc shadow">
+                    <h4>Dubai</h4>
+                    <p><b>Dubai city has become iconic for its skyscrapers and high-rise buildings, in particular the world's tallest building.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                    <h5>Price: <b>$1000</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/Hong Kong.jpg" alt="Hong Kong">
+                <div class="desc shadow">
+                    <h4>Hong Kong</h4>
+                    <p><b>Hong Kong is known for its vibrant nightlife and being a party hub. To explore Hong Kong's nightlife, start with a popular place.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$800</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/Japan.webp" alt="Japan">
+                <div class="desc shadow">
+                    <h4>Japan</h4>
+                    <p><b>Japan is an archipelago, or string of islands, on the eastern edge of Asia. There are four main islands: Hokkaido, Honshu, Shikoku.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$650</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cards">
+            <div class="col-md-4 car">
+                <img src="./images/Korea.jpg" alt="Korea">
+                <div class="desc shadow">
+                    <h4>Korea</h4>
+                    <p><b>South Korea is an extraordinary country filled with beautiful beaches, thriving cities, ancient temples.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$700</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/Paris.png" alt="Paris">
+                <div class="desc shadow">
+                    <h4>Paris</h4>
+                    <p><b>Paris is monumental, both due to its size but also its wealth of architectural heritage! The symbol of the capital city.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$900</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/USA.jpg" alt="USA" id="selection1">
+                <div class="desc shadow">
+                    <h4>USA</h4>
+                    <p><b>The United States is by far the most famous country in the world. It's famous for its attractions, such as the Grand Canyon.</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price: <b>$950</b></h5>
+                    <button class="btn btn-warning text-light allBtns">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h1 class="text-center" id="section3" style="font-weight: 700;"><span class="heading" style="color: purple;">S</span>ervices</h1>
+        <br>
+        <div class="row cards">
+            <div class="col-md-4 car">
+                <img src="./images/Affordable.webp" alt="Affordable Hotels">
+                <div class="desc shadow text-center">
+                    <h4>Affordable Hotels</h4>
+                    <p style="margin: 0;"><b>User Reviews</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/foodDrinks.avif" alt="food and drinks">
+                <div class="desc shadow text-center">
+                    <h4>Food & Drinks</h4>
+                    <p style="margin: 0;"><b>User Reviews</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/Safety.jpeg" alt="Safety Guide">
+                <div class="desc shadow text-center">
+                    <h4>Safety Guide</h4>
+                    <p style="margin: 0;"><b>User Reviews</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row cards">
+            <div class="col-md-4 car">
+                <img src="./images/swimming.jpg" alt="Swimming Pool">
+                <div class="desc shadow text-center">
+                    <h4>Swimming Pool</h4>
+                    <p style="margin: 0;"><b>User Reviews</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/Gym.jpg" alt="Gym">
+                <div class="desc shadow text-center">
+                    <h4>Gym</h4>
+                    <p style="margin: 0;"><b>User Reviews</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 car">
+                <img src="./images/laundry.jpg" alt="Laundry">
+                <div class="desc shadow text-center">
+                    <h4>Laundry</h4>
+                    <p style="margin: 0;"><b>User Reviews</b></p>
+                    <div class="star">
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                        <i class="bi bi-star-fill filling"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center" id="section4" style="font-weight: 700;"><span class="heading" style="color: purple;">G</span>allery</h1>
+        <br>
+        <div class="row cards">
+            <div class="col-md-4">
+                <img src="./images/photo1.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+            <div class="col-md-4">
+                <img src="./images/photo2.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+            <div class="col-md-4">
+                <img src="./images/photo3.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+        </div>
+        <div class="row cards">
+            <div class="col-md-4">
+                <img src="./images/photo4.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+            <div class="col-md-4">
+                <img src="./images/photo5.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+            <div class="col-md-4">
+                <img src="./images/photo6.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+        </div>
+        <div class="row cards">
+            <div class="col-md-4">
+                <img src="./images/photo7.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+            <div class="col-md-4">
+                <img src="./images/photo8.jpg" alt="Gallary photos" class="shadow expand">
+            </div>
+            <div class="col-md-4">
+                <img src="./images/photo9.webp" alt="Gallary photos" class="shadow expand">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid bg-light">
+        <h1 class="text-center" id="section5" style="font-weight: 700;"><span class="heading" style="color: purple;">A</span>bout Us</h1>
+        <div class="row bg-light holder">
+
+            <section class="col-md-6 d-flex align-items-center justify-content-center bg-white first">
+                <img src="./images/logo.png" alt="Company Logo" id="logo">
+            </section>
+            <section class="col-md-6 second">
+                <div style="box-sizing: border-box;">
+                    <h3 class="text-center">About Company</h3>
+                    <p class="about">The Noida based company, with a strong presence in inbound travel trade and corporate segment, today has excelled its branches over Delhi, Mumbai, Agra, Jaipur, Haridwar, Rishikesh & Badrinath. The company with its professionally managed
+                        travel engine specializes mainly in organizing Adventure, Cultural, Religious, hill station & wildlife tours in India through a sprawling network. It offers 24 X 7 hours services that include travel planning, itinerary design,
+                        hotel bookings, ticket reservations and transport facilities. It also provides holiday packages, customized as per client’s need and budget.</p>
+                    <p class="about">Founded in the year 2005 as NightingaleTravels.com, an online travel platform, the company boosted as a private limited in the year 2013 and has emerged as the “Best Upcoming Inbound Tour Operators in India”. It has been awarded in
+                        the category of “Excellence in the Tourism Industry” by World Tourism Brand Academy.</p>
+                    <h4 class="text-center">Why Us</h4>
+                    <p class="about">Nightingale Travels Pvt. Ltd. is an award winning travel organization and excels with quality services from its experienced staffs. Over the years the company has received positive feedbacks from its existing clients and hence one
+                        can expect a cordial reception.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-dark">
+        <div class="d-flex">
+            <section class="col-md-6 d-flex p-4 text-secondary links">
+                <div class="sections p-4">
+                    <h6 style="margin-bottom: 20px;" class="text-light">MAIN SECTIONS</h6>
+                    <a href="#section1">
+                        <p>Book</p>
+                    </a>
+                    <a href="#section2">
+                        <p>Packages</p>
+                    </a>
+                    <a href="#section3">
+                        <p>Services</p>
+                    </a>
+                    <a href="#section4">
+                        <p>Gallery</p>
+                    </a>
+                    <a href="#section5">
+                        <p>About Us</p>
+                    </a>
+                </div>
+                <div class="terms p-4">
+                    <h6 style="margin-bottom: 20px;" class="text-light">LEGAL POLICY</h6>
+                    <a href="#">
+                        <p>Terms & Conditions</p>
+                    </a>
+                    <a href="#">
+                        <p>Disclaimer</p>
+                    </a>
+                    <a href="#">
+                        <p>Privacy Policy</p>
+                    </a>
+                </div>
+            </section>
+            <section class="col-md-6 p-5">
+                <h6 style="margin-bottom: 40px;" class="text-light text-center">SOCIAl MEDIA</h6>
+                <div class="social">
+                    <div>
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/linkedIn.png" alt="LinkedIn"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/youtube.webp" alt="Youtube"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="foot">
+            <img src="./images/logo.png" alt="Company Logo" class="footImg text-center">
+            <p class="text-center text-light m-0 p-2">&#169; 2019 Nightingale Travel Company, All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            $("#password1").keyup(function() {
+                if (checkpassword1()) {
+                    $("#pwdtext1").html("<font color='green'>Password Validated</font>");
+                } else {
+                    $("#pwdtext1").html("<font color='red'>Enter Valid Password</font>");
+                }
+            })
+            $("#password2").keyup(function() {
+                if (checkpassword2()) {
+                    $("#pwdtext2").html("<font color='green'>Password Validated</font>");
+                } else {
+                    $("#pwdtext2").html("<font color='red'>Enter Valid Password</font>");
+                }
+            })
+            $("#email1").keyup(function() {
+                if (checkemail1()) {
+                    $("#emailtext1").html("<font color='green'>Email Id Validated</font>");
+                } else {
+                    $("#emailtext1").html("<font color='red'>Enter Valid Email Id</font>");
+                }
+            })
+            $("#email2").keyup(function() {
+                if (checkemail2()) {
+                    $("#emailtext2").html("<font color='green'>Email Id Validated</font>");
+                } else {
+                    $("#emailtext2").html("<font color='red'>Enter Valid Email Id</font>");
+                }
+            })
+            $("#fullname").keyup(function() {
+                if (checkname()) {
+                    $("#fullnme").html("<font color='green'>Name Validated</font>");
+                } else {
+                    $("#fullnme").html("<font color='red'>Enter Valid Name</font>");
+                }
+            })
+            $("#contact").keyup(function() {
+                if (checkcontact()) {
+                    $("#contacttext").html("<font color='green'>Contact Number Validated</font>");
+                } else {
+                    $("#contacttext").html("<font color='red'>Enter Valid Contact Number</font>");
+                }
+            })
+        })
+
+        function checkpassword1() {
+            let pwd = $("#password1").val();
+            let pwdExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+            if (pwdExp.test(pwd)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkpassword2() {
+            let pwd = $("#password2").val();
+            let pwdExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+            if (pwdExp.test(pwd)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkemail1() {
+            let email = $("#email1").val();
+            let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (emailExp.test(email)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkemail2() {
+            let email = $("#email2").val();
+            let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (emailExp.test(email)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkname() {
+            let name = $("#fullname").val();
+            let nameExp = /^[a-zA-Z\s]+$/;
+            if (nameExp.test(name)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkcontact() {
+            let contact = $("#contact").val();
+            let contactExp = /^\d{10}$/;
+            if (contactExp.test(contact)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

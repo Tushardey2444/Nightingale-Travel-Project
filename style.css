@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navfst {
+    background-image: linear-gradient(225deg, #00b7ff 0%, #9000ff 50%, #0072fe 100%);
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10 !important;
+}
+
+.nav-link {
+    color: gainsboro;
+}
+
+.capt {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.858);
+}
+
+.img-abs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container1 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+.box3 input {
+    border: 0;
+    background-color: blueviolet;
+    color: white;
+}
+
+.box3 input:hover {
+    background-color: rgb(255, 43, 255);
+    color: white;
+}
+
+.backimg {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.navbg {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.navbg:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+    color: black;
+}
+
+.placename::after {
+    content: '';
+    animation: placename 5s infinite;
+    animation-timing-function: linear;
+    color: rgba(234, 0, 0, 0.95);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+@keyframes placename {
+    0% {
+        content: 'USA';
+    }
+    20% {
+        content: 'Paris';
+    }
+    40% {
+        content: 'Japan';
+    }
+    60% {
+        content: 'Korea';
+    }
+    80% {
+        content: 'India';
+    }
+    100% {
+        content: 'Dubai';
+    }
+}
+
+.dropdown1:hover .dropdown-menu1 {
+    display: block;
+}
+
+.btn {
+    background-color: #8300fe;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.navigation {
+    color: red;
+}
+
+.text {
+    color: black
+}
+
+#logo {
+    width: 50%;
+}
+
+.heading {
+    text-shadow: 0px 1px black;
+}
+
+.holder {
+    padding: 30px;
+}
+
+.first {
+    height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    border: solid rgb(220, 219, 219);
+    border-width: 1px 1px 0px 1px;
+}
+
+.second {
+    height: 80%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+.textField input,
+.textField textarea,
+.textField button {
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+}
+
+.textField button {
+    font-weight: 700;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cards>div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cards img {
+    height: 240px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.cards h4 {
+    font-weight: 650;
+}
+
+.desc {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cards {
+    margin-bottom: 30px;
+}
+
+.car {
+    margin-bottom: 30px;
+}
+
+.filling {
+    color: rgb(243, 243, 0);
+}
+
+.expand {
+    transition: 0.35s;
+}
+
+.expand:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.about {
+    text-align: justify;
+}
+
+.footImg {
+    width: 200px;
+    height: 140px;
+    margin-bottom: 5px;
+}
+
+.foot {
+    text-align: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.social>div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.social>div>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social>div img {
+    width: 70%;
+}
+
+.allBtns {
+    background-color: blueviolet !important;
+    border: 0 !important;
+    box-shadow: 0 6px 4px -6px black;
+}
+
+.allBtns:hover {
+    background-color: rgb(255, 43, 255) !important;
+}
